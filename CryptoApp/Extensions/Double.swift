@@ -79,4 +79,29 @@ extension Double {
     func asPercentString() -> String {
         return asNumberString() + "%"
     }
+    
+    /// Convert a Double to a String with K,M,BN,TR  abbrevitations
+    /// ```
+    /// Convert 12 to 12.00
+    /// Convert 1234 to 1.23K
+    /// Convert 123456 to 123.45K
+    /// Convert 12345678 to 123.45K
+    /// Convert 1234567890 to 13.34Mn
+    /// ```
+    func formattedWithAbbreviatitons() -> String {
+        let num = abs(Double(self))
+        let sign = (self < 0) ? "-" : ""
+        
+        switch num {
+        case 1_000_000_000_000...:
+            let formatted = num / 1_000_000_000_000
+            let stringFormatted = formatted.asNumberString()
+            return "\(sign)\(stringFormatted)Tr"
+        case 0...:
+            return self.asNumberString()
+        default:
+            return "\(sign)\(self)"
+        }
+    }
+    
 }

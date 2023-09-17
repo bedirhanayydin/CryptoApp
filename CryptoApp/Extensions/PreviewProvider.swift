@@ -21,6 +21,10 @@ class DeveloperPreview {
     
     let homeVM = HomeViewModel()
     
+    let stat1 = StatisticModel(title: "Market Cap", value: "$12.58n", percentageChange: 25.34)
+    let stat2 = StatisticModel(title: "Total Volume", value: "$1.23Tr")
+    let stat3 = StatisticModel(title: "Portfolio Value", value: "$59.4k", percentageChange: -12.28)
+    
     let coin = CoinModel(id: "bitcoin", symbol: "btc", name:  "Bitcoin", image:  "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579", currentPrice: 25669, marketCap: 500087850998, marketCapRank: 1, fullyDilutedValuation: 539046486027, totalVolume: 6066360671, high24H: 25919, low24H: 25639, priceChange24H: -135.96454546325913, priceChangePercentage24H: -0.5269, marketCapChange24H: -2479572099.3726807, marketCapChangePercentage24H: -2479572099.3726807, circulatingSupply: 19482262, totalSupply: 21000000, maxSupply: 21000000, ath: 69045, athChangePercentage: -62.81929, athDate: "2021-11-10T14:24:11.849Z", atl: 67.81, atlChangePercentage: 37758.29651, atlDate:  "2013-07-06T00:00:00.000Z", lastUpdated: "2023-09-11T10:49:07.907Z", sparklineIn7D: SparklineIn7D(price: [
         25942.345376705038,
         25965.23324335423,
